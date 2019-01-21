@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>practice</title>
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript">
+   		document.addEventListener('plusready', function(){
+   			//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+   		});
+    </script>
+	<style>
+		#firstview{
+			
+		}
+		#header{
+			height: 140px;
+		}
+		#content{
+		}
+		#footer{
+			width: 100%;
+			height: 50px;
+			position: fixed;
+			bottom: 0px;
+		}
+	</style>
+</head>
+<body>
+	<div data-role="page" id="firstview">
+		<div data-role="header" id="header">
+			header
+		</div>
+		<div data-role="content" id="content">
+			content
+		</div>
+		<div data-role="footer" id="footer">
+			footer
+		</div>
+	</div>
+</body>
+</html>
