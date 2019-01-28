@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>exrcises</title>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+		<script type="text/javascript" src="js/vue.js"></script>
+		<script type="text/javascript">
+// 			Vue.component("exrcises-node",{
+// 				props:["node"],
+// 				template:"<li>{{node.naem}}</li>",
+// 			});
+			 window.onload = function () {           
+				alert('onload，图片加载完');          
+			}
+			$(document).ready(function() {
+				console.log(">>>>>>>>>>");
+			})
+			
+			function bodyOnLoad() {
+				console.log("test111");
+				$mobile.loading("show");
+			}
+			
+			function getExrcises() {
+				$.getJson("http://192.168.2.55:8000/practice-content-service/exrcises/1/1/1//1", function(data, status){
+					$.mobile.loading("hide");
+					if(status !== 200) {
+						document.getElementById("content").innerHTML="网络无法使用";
+						return;
+					}
+					alert.show(data.result[0].name);
+				} );
+			}
+		</script>
+	</head>
+	<body>
+		<div data-role="page" id="exrcisespage">
+			<div data-role="heapder">
+				asdf22
+			</div>
+			<div data-role="content" id="content">
+				<!-- <ol>
+					<exrcises-node></exrcises-node>
+				</ol> -->
+			</div>
+			<div data-role="footer" data-position="fixed">
+				asdf
+			</div>
+		</div>
+	</body>
+</html>
